@@ -1,39 +1,78 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>CSS Layouting</title>
-    </head>
-    <body>
-        <div class="header">
-            <h1>Selamat Datang di Website Kami</h1>
-        </div>
-
-        <div class="navigasi">
-            <h2>Daftar Link</h2>
-            <a href="#">Link</a>
-            <a href="#">Link</a>
-            <a href="#">Link</a>
-            <a href="#">Link</a>
-        </div>
-
-        <div class="main">
-            <h2>TEKNIK INFORMATIKA</h2>
-            <img src="img/logo-polinema.png">
-            <p>Pada tahun 2010 berdasar kebutuhan masyarakat dan industri terkait Program Diploma IV bidang informatika maka Polinema mendirikan program studi baru Diploma IV (DIV) Teknik Informatika (TI). Pada awal berdirinya jumlah peserta didik Program D-IV TI hanya terdiri dari 46 Mahasiswa, namun pada tahun 2015 jumlah peserta didik Prodi D-IV TI telah mengalami peningkatan menjadi 545 Mahasiswa.</p>
-            <p>Perkembangan jumlah mahasiswa yang sangat pesat baik di Program Studi D-III MI maupun D-IV TI mendorong pimpinan di Polinema untuk menyatukan kedua program studi tersebut dalam satu organisasi jurusan baru terpisah dari jurusan Teknik Elektro. dibawa Jurusan baru terpisah dari Jurusan Teknik Elektro. Dan pada tahun 2015 berdasarkan SK Direktur Nomor 53 dalam rangka peningkatan mutu pengelolaan dan optimasi sumber daya dibentuklah Jurusan Teknologi Informasi (JTI) dengan prodi D-III MI dan D-IV TI.</p>
-        </div>
-
-        <p class="copyright">Copyright 2020. Desain dan Pemrograman Web JTI Polinema</p>
-        <div class="copyright"></div>
-
+        <title>Grid</title>
         <style>
-            .navigasi {
-                background-color: pink;
+            body, html{
+                margin: 0;
+                padding: 0;
+                font-size: 20px;
+                font-family: arial;
+                color: white;
+                text-transform: uppercase;
+                text-align: center;
             }
-            .main {
-                background-color: lightgreen
+            
+            .container {
+                width: 600px;
+                margin: 50px auto;
+                border: 5px solid #333;
+                box-sizing: border-box;
+                padding: 5px;
+                display: grid;
+                grid-template-areas: "header header"
+                    "aside main"
+                    "nav main"
+                    "footer footer";
+                grid-template-columns: 1fr 1.5fr;
+                grid-template-rows: 1fr 1fr 1.3fr; 
+            }
+            
+            header {
+                grid-area: header;
+                background-color: #B063D8;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            aside {
+                grid-area: aside;
+                background-color: #2F93FF;
+                padding: 60px 0;
+            }
+
+            nav {
+                grid-area: nav;
+                background-color: #E45765;
+                padding: 100px 0;
+            }
+
+            main {
+                grid-area: main;
+                background-color: #E0AA77;
+                box-sizing: border-box;
+                flex: 1.5;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            footer {
+                grid-area: footer;
+                background-color: #666;
+                padding: 20px 0;
             }
         </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>Header</header>
+            <aside>Aside</aside>
+            <nav>Nav</nav>
+            <main>Main</main>
+            <footer>Footer</footer>
+        </div>
     </body>
 </html>
-
