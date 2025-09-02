@@ -1,7 +1,6 @@
 html, body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body{
@@ -12,6 +11,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(135deg, #FDCEDF 0%, #F8E8EE 100%);
     line-height: 1.65;
+    padding-bottom: 1000px;
 }
 
 body::before {
@@ -25,7 +25,7 @@ body::before {
 }
 
 .container-satu{
-    width: 90%;
+    width: 90;
     max-width: 1000px;
     margin: 50px auto;
     background-color: #fff;
@@ -68,16 +68,8 @@ body::before {
     padding: 0;
 }
 
-.sidebar-satu li {
-    margin-bottom: 10px;
-}
-
 .sidebar-satu a {
     text-decoration: none;
     color: #FF9494;
     font-weight: bold;
-}
-
-h2, h3 {
-    margin-top: 0;
 }
